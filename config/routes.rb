@@ -1,4 +1,10 @@
 AmericanLit400::Application.routes.draw do
+  get "subscribers/create"
+
+  get "subscribers/update"
+
+  get "subscribers/destroy"
+
   get "pages/new"
 
   get "pages/index"
@@ -10,6 +16,8 @@ AmericanLit400::Application.routes.draw do
   get "pages/update"
 
   get "pages/show"
+
+	resources :subscribers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -60,7 +68,7 @@ AmericanLit400::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "pages#index"
 
   # See how all your routes lay out with "rake routes"
 

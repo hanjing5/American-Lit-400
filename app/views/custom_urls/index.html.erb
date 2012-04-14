@@ -4,7 +4,7 @@
 <% @custom_urls.each do |c_url| %>
 	<tr>
 		<td>
-		<%= c_url.end_point%>
+		<%= link_to c_url.end_point, c_url.end_point %>
 		</td>
 		<td>
 		<%= link_to c_url.url, c_url.url %>

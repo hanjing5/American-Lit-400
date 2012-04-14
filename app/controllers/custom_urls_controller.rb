@@ -5,15 +5,7 @@ class CustomUrlsController < ApplicationController
 
 	def create
 		@custom_url = CustomUrl.new(params[:custom_urls])
-		puts 'test'
-		puts params[:custom_urls]
-		puts params[:custom_urls]
-		puts params[':custom_urls']
-		puts params[:url]
-		puts params
-		puts params.keys
-		puts params['authenticity_token']
-		puts 'test'
+
 		if @custom_url.save
 			redirect_to custom_urls_path
 		else 
@@ -29,5 +21,11 @@ class CustomUrlsController < ApplicationController
 	end
 
 	def show
+	end
+
+	def destroy
+		@custom_url = CustomUrl.find(params[:id])
+		@custom_url.delete
+		redirect_to custom_urls_path
 	end
 end

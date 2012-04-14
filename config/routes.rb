@@ -1,23 +1,18 @@
 AmericanLit400::Application.routes.draw do
   get "subscribers/create"
-
   get "subscribers/update"
-
   get "subscribers/destroy"
 
   get "pages/new"
-
   get "pages/index"
-
   get "pages/create"
-
   get "pages/destroy"
-
   get "pages/update"
-
   get "pages/show"
 
 	resources :subscribers
+
+	match '/:custom_url', :to=>'pages#redirections'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

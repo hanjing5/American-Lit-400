@@ -24,4 +24,11 @@ class PagesController < ApplicationController
 		@toolbar[:about] = 'active'
 	end
 
+	def redirections
+		@url = params[:custom_url]
+		if @url == 'manga'
+			redirect_to 'http://cold-frost-9554.heroku.com'
+		end
+	end
+
 end

@@ -1,0 +1,14 @@
+
+<div class="container">
+<%= form_for "custom_urls",:url=>{:controller=>'custom_urls', :action=>'create'},:method=>'post' do |f|%>
+
+	URL End Point (ie. 'manga' for ingidio/managa, 'food' for ingidio/food)
+	<br>
+	<%= f.text_field :end_point %>
+	<br>
+	External URL (ie. URL you are linking to)
+	<br>
+	<%= f.text_field :url %>
+	<br>
+	<%= f.submit %>
+<% end %>

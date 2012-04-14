@@ -1,4 +1,6 @@
 AmericanLit400::Application.routes.draw do
+  get "custom_urls/new"
+
   get "subscribers/create"
   get "subscribers/update"
   get "subscribers/destroy"
@@ -11,6 +13,9 @@ AmericanLit400::Application.routes.draw do
   get "pages/show"
 
 	resources :subscribers
+	resources :custom_urls
+
+	match '/settings', :to=>'pages#settings'
 
 	match '/:custom_url', :to=>'pages#redirections'
 

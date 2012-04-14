@@ -24,6 +24,10 @@ class PagesController < ApplicationController
 		@toolbar[:about] = 'active'
 	end
 
+	def settings
+		redirect_to custom_urls_path
+	end
+
 	def redirections
 		@url = params[:custom_url]
 		if @url == 'manga'

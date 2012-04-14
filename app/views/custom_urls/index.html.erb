@@ -1,0 +1,20 @@
+<div class="container">
+<table>
+
+<% @custom_urls.each do |c_url| %>
+	<tr>
+		<td>
+		<%= c_url.end_point%>
+		</td>
+		<td>
+		<%= link_to c_url.url, c_url.url %>
+		</td>
+		<td>
+		<%= link_to "delete", custom_url_path(c_url.id), :method=>'delete' %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+
+<%= link_to "Add a link pair", new_custom_url_path,:class=>"btn btn-primary btn-large" %>

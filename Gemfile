@@ -9,6 +9,7 @@ gem "thin"
 gem "rack", "1.2.4"
 gem "mail"
 gem 'jquery-rails', '>= 1.0.12'
+gem "devise"
 gem "pg"
 
 group :development do

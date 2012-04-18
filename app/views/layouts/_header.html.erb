@@ -48,6 +48,10 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="<%= @home %>"><a href="/">Home</a></li>
+							<% if current_admin %>
+								<li class="<%= @home %>"><a href="/settings">Settings</a></li>
+								<li><%= link_to "log out", destroy_admin_session_path,:method=>'delete' %></li>
+							<% end %>
               <!--<li class="<%= @about %>"><a href="about">About</a></li>
               <li class="<%= @docs %>"><a href="docs">Documentation</a></li>
 							<li class="<%= @contact %>"><a href="contact">Contact</a></li>-->

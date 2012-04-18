@@ -1,4 +1,6 @@
 AmericanLit400::Application.routes.draw do
+  devise_for :admins
+
   get "custom_urls/new"
 
   get "subscribers/create"

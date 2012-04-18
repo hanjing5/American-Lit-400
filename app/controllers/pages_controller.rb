@@ -25,7 +25,9 @@ class PagesController < ApplicationController
 	end
 
 	def settings
-		redirect_to custom_urls_path
+		if current_admin
+			redirect_to custom_urls_path
+		end
 	end
 
 	def redirections

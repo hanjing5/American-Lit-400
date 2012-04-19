@@ -11,7 +11,7 @@ AmericanLit400::Application.routes.draw do
   get "pages/show"
 
 	resources :sub, :controller=>'subscribers', :only=>[:create]
-	resources :site, :controller=>'site_infos', :only=>[:update, :index]
+	resources :site, :controller=>'site_infos', :only=>[:update, :show]
 	resources :custom_urls
 
 	match '/manage_urls', :to=>'admins#manage_urls', :as => :manage_urls

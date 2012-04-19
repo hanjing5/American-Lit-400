@@ -14,9 +14,14 @@ class SubMailer < ActionMailer::Base
 								'hanqijing@gmail.com'
 						#		'foxnewsnetwork@gmail.com'
 							]
-		@url = root_path
+		@admins = Admin.all
+
+		@site_info = SiteInfo.first
+
+		@url = @site_info.nick_name
+
 		@admins.each do |admin|
-    	mail(:to => admin, :subject => "A new subscriber has joined")
+    	mail(:to => admin.email, :subject => "A new subscriber has joined #{@url}")
 		end
   end
 end

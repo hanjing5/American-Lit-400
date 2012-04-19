@@ -43,10 +43,10 @@
 	</p>
 
   <p>
-    <%= form_for "subscriber", :url => subscribers_path, :method=>'post',:remote=>true do |f| %>                                      
+    <%= form_for "subscriber", :url => sub_index_path, :method=>'post',:remote=>true do |f| %>                                      
       <div id='response' style="display:none;width:40.5em">
       </div>
-	<div id="sub_form">
+		<div id="sub_form">
       <%= f.text_field :email, :placeholder=>'test@example.com', :style=>'font-size:2em;height:2em;width:15em' %> 
       <%= f.submit "Join Beta",:class=>"btn btn-primary btn-large",:style=>'height:2em;font-size:2em;' %>                                             
 	</div>

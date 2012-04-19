@@ -1,9 +1,10 @@
 class SubscribersController < ApplicationController
   def create
-    @subscriber = Subscriber.create(params[:subscriber])
+    @subscriber = Subscriber.new(params[:subscriber])
     @success = false
 
     if @subscriber.save
+			puts 'We saved the subscriber!'
       @success = true
       @msg = 'Thank you for signing up! You will be the first to know when we launch.'
           
@@ -11,6 +12,7 @@ class SubscribersController < ApplicationController
       respond_to do |format|
         format.js
         format.html {redirect_to root_path}
+				return
       end 
     else
       @msg = 'Failed!'
@@ -21,5 +23,12 @@ class SubscribersController < ApplicationController
       end 
     end 
   end 
+
+	def manage
+		if current_admin
+			@subscribers = Subscriber.all
+		end
+	end
+
 end
 

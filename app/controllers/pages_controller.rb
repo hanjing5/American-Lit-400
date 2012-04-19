@@ -32,7 +32,6 @@ class PagesController < ApplicationController
 
 	def redirections
 		@url = params[:custom_url]
-		
 		@custom_url = CustomUrl.find_by_end_point(@url)
 		
 		if @custom_url
@@ -40,9 +39,6 @@ class PagesController < ApplicationController
 		else
 			redirect_to root_path
 		end
-		#if @url == 'manga'
-		#	redirect_to 'http://cold-frost-9554.heroku.com'
-		#end
 	end
 
 end

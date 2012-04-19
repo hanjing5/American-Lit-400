@@ -3,10 +3,6 @@ AmericanLit400::Application.routes.draw do
 
   get "custom_urls/new"
 
-  get "subscribers/create"
-  get "subscribers/update"
-  get "subscribers/destroy"
-
   get "pages/new"
   get "pages/index"
   get "pages/create"
@@ -14,12 +10,13 @@ AmericanLit400::Application.routes.draw do
   get "pages/update"
   get "pages/show"
 
-	resources :subscribers
+	resources :sub, :controller=>'subscribers', :only=>[:create]
 	resources :custom_urls
 
 	match '/settings', :to=>'pages#settings'
+	match '/manage', :to=>'subscribers#manage',:as => :manage_subscribers
 
-	match '/:custom_url', :to=>'pages#redirections'
+	match '/:custom_url', :to=>'pages#redirections',:via=>'get'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

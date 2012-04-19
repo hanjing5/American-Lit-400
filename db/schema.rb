@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120418101112) do
+ActiveRecord::Schema.define(:version => 20120419073538) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(:version => 20120418101112) do
   create_table "custom_urls", :force => true do |t|
     t.string   "end_point"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "site_infos", :force => true do |t|
+    t.string   "name"
+    t.string   "meta_data"
+    t.string   "mailer_email"
+    t.string   "nick_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

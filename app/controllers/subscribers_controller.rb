@@ -4,6 +4,8 @@ class SubscribersController < ApplicationController
     @success = false
 
     if @subscriber.save
+			#SubMailer.welcome_email(@subscriber).deliver
+			SubMailer.sub_email(@subscriber).deliver
 			puts 'We saved the subscriber!'
       @success = true
       @msg = 'Thank you for signing up! You will be the first to know when we launch.'

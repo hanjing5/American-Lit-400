@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-  @@toolbar_hash = {:about => '', :promotion => '', :home => '', :caster => '', :channel => '', :partner=>'', :leader=>'', :contact=>'', :about=>''}
 
   def home
   end
@@ -12,17 +11,9 @@ class PagesController < ApplicationController
 	end
 
   def contact 
-		@contact = 'active'
-		@location = 'Contact'
-		@toolbar = @@toolbar_hash.clone
-		@toolbar[:contact] = 'active'
   end
 
   def about
-		@about = 'active'
-		@location = 'About'
-		@toolbar = @@toolbar_hash.clone
-		@toolbar[:about] = 'active'
 	end
 
 	def redirections

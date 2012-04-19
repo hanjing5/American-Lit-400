@@ -1,4 +1,6 @@
 class SubscribersController < ApplicationController
+	
+	
   def create
     @subscriber = Subscriber.new(params[:subscriber])
     @success = false

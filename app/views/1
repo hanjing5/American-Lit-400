@@ -48,7 +48,7 @@
       </div>
 		<div id="sub_form">
       <%= f.text_field :email, :placeholder=>'test@example.com', :style=>'font-size:2em;height:2em;width:15em' %> 
-      <button id='subscribe_button' class="btn btn-primary btn-large" style='height:2em;font-size:2em;' onclick="$(this).button('loading')" data-loading-text='saving...'>Join Beta</button>
+      <button class=>"btn btn-primary btn-large",:style=>'height:2em;font-size:2em;',:onclick="$().button('loading')">Join Beta</button>
 	</div>
     <% end %>
   </p>

@@ -9,6 +9,8 @@ class AdminsController < ApplicationController
 
 	def manage_subs
 		if current_admin
+			@manage_subs = 'active'
+			@title = 'Manage Subscribers'
 			@subscribers = Subscriber.all
 		else
 			redirect_to new_admin_session_path

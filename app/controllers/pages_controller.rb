@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
 	def index
+		@title = 'Home'
 	end
 
 	def show

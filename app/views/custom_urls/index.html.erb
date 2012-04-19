@@ -1,16 +1,15 @@
-<div class="container">
-<table>
+<table style="width:100%">
 <tr>
-	<th>
-	End Point
-	</th>
-	<th>
-	Redirect URL
-	</th>
-	<th>
-	</th>
+	<td>
+	<h3>End Point</h3>
+	</td>
+	<td>
+	<h3>Redirect URL</h3>
+	</td>
+	<td>
+	</td>
 <tr>
-<% @custom_urls.each do |c_url| %>
+<% @c_urls.each do |c_url| %>
 	<tr>
 		<td>
 		<%= link_to c_url.end_point, c_url.end_point %>
@@ -26,6 +25,47 @@
 </table>
 
 <br>
-<p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--<p>
 <%= link_to "Add a link pair", new_custom_url_path,:class=>"btn btn-primary btn-large" %>
-</p>
+</p>-->
+
+<div class="well">
+<table style="width:100%">
+<%= form_for "custom_urls",:url=>{:controller=>'custom_urls', :action=>'create'},:method=>'post' do |f|%>
+	<tr>
+	<td>
+	<h3>
+		URL End Point 
+	</h3>
+	(ie. 'manga' for ingidio/managa, 'food' for ingidio/food)
+	</td>
+	<td>
+	<h3>
+		External URL 
+	</h3>
+		(ie. URL you are linking to. Ends with .net, .com or whatever)
+	</td>
+	<td>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<%= f.text_field :end_point,:placeholder=>'example' %>
+	</td>
+	<td>
+	<%= f.text_field :url,:placeholder=>'example.com' %>
+	</td>
+	<td>
+	<button class='btn btn-large btn-primary' type='submit'>
+		Add Link
+	</button>
+	</td>
+	</tr>
+<% end %>
+</table>
+</div>

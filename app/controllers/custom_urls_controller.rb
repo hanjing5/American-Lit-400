@@ -21,7 +21,10 @@ class CustomUrlsController < ApplicationController
 	end
 
 	def index
-		@custom_urls = CustomUrl.all
+		@manage_urls = 'active'
+		@title = 'Manage URLs'
+		@c_urls = CustomUrl.all
+		@custom_url = CustomUrl.new
 	end
 
 	def show

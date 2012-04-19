@@ -1,27 +1,21 @@
 <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="#">InGidio</a>
 
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">InGidio</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="<%= @home %>"><a href="/">Home</a></li>
-							<% if current_admin %>
-								<li class="<%= @home %>"><a href="/settings">Settings</a></li>
-								<li class="<%= @home %>"><%= link_to "Subscribers", manage_subscribers_path %></li>
-								<li><%= link_to "log out", destroy_admin_session_path,:method=>'delete' %></li>
-							<% end %>
-              <!--<li class="<%= @about %>"><a href="about">About</a></li>
-              <li class="<%= @docs %>"><a href="docs">Documentation</a></li>
-							<li class="<%= @contact %>"><a href="contact">Contact</a></li>-->
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+				<ul class="nav">
+					<li class="<%= @home %>"><a href="/">Home</a></li>
+					<% if current_admin %>
+						<li class="<%= @manage_urls %>">
+							<%= link_to "Sub-URLs", manage_urls_path %>
+						</li>
 
-    </div>
+						<li class="<%= @manage_subs %>">
+							<%= link_to "Subscribers", manage_subs_path %>
+						</li>
+						<li><%= link_to "Logout", destroy_admin_session_path,:method=>'delete' %></li>
+					<% end %>
+				</ul>
+		</div>
+	</div>
+</div>

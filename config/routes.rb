@@ -13,8 +13,8 @@ AmericanLit400::Application.routes.draw do
 	resources :sub, :controller=>'subscribers', :only=>[:create]
 	resources :custom_urls
 
-	match '/settings', :to=>'pages#settings'
-	match '/manage', :to=>'subscribers#manage',:as => :manage_subscribers
+	match '/manage_urls', :to=>'admins#manage_urls', :as => :manage_urls
+	match '/manage_subs', :to=>'admins#manage_subs',:as => :manage_subs
 
 	match '/:custom_url', :to=>'pages#redirections',:via=>'get'
 

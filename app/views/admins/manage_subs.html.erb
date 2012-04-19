@@ -1,0 +1,39 @@
+<div class="container">
+<h2>
+	You have <%= @subscribers.count %> subscribers.
+</h2>
+<h1>
+For copy & paste export
+</h1>
+<hr>
+
+<% @subscribers.each do |sub| %>
+<%=sub.email%>,
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>
+List
+</h1>
+<hr>
+<table>
+<% @subscribers.each do |sub| %>
+<tr>
+	<td>
+  <%= sub.email %>
+	</td>
+	<td>
+	<%= sub.created_at %>
+	
+	</td>
+</tr>
+
+<% end %>
+</table>
+</div>
+

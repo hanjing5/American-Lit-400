@@ -24,12 +24,6 @@ class PagesController < ApplicationController
 		@toolbar[:about] = 'active'
 	end
 
-	def settings
-		if current_admin
-			redirect_to custom_urls_path
-		end
-	end
-
 	def redirections
 		@url = params[:custom_url]
 		@custom_url = CustomUrl.find_by_end_point(@url)

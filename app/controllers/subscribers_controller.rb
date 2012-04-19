@@ -24,11 +24,6 @@ class SubscribersController < ApplicationController
     end 
   end 
 
-	def manage
-		if current_admin
-			@subscribers = Subscriber.all
-		end
-	end
 
 end
 

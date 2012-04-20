@@ -8,7 +8,7 @@
 
 Admin.delete_all
 Admin.create(:email=>'hanqijing@gmail.com', :password=>'123456')
-#Admin.create(:email=>'foxnewsnetwork@gmail.com', :password=>'wtfisthisbullshit11')
+Admin.create(:email=>'foxnewsnetwork@gmail.com', :password=>'wtfisthisbullshit11')
 
 SiteInfo.delete_all
 SiteInfo.create(:nick_name=>'ingidio',:name=>'ingidio',:meta_data=>'ingidio')

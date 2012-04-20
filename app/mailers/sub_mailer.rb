@@ -11,8 +11,8 @@ class SubMailer < ActionMailer::Base
     @sub = subscriber
 		@count = Subscriber.all.count
 		@admins = [
-								'hanqijing@gmail.com'
-						#		'foxnewsnetwork@gmail.com'
+								'hanqijing@gmail.com',
+								'foxnewsnetwork@gmail.com'
 							]
 		@admins = Admin.all
 

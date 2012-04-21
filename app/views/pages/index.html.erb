@@ -1,7 +1,7 @@
       <style>
 			body {
 				background-color:white;
-				background-image: url('/images/weapon.jpg');
+				background-image: url('<%= SiteInfo.first.bg_img_link %>');
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
 				-o-background-size: cover;
@@ -73,5 +73,5 @@
       </div>
 
 			<script>
-			$('.hero-unit').blurjs({ source: 'body', radius: 10 });
+				$('.hero-unit').blurjs({ source: 'body', radius: 10 });
 			</script>

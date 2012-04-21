@@ -11,12 +11,12 @@ AmericanLit400::Application.routes.draw do
   get "pages/show"
 
 	resources :sub, :controller=>'subscribers', :only=>[:create]
-	resources :site_infos
+	resources :site, :controller=>'site_infos'
 	resources :custom_urls
 
 	match '/manage_urls', :to=>'admins#manage_urls', :as => :manage_urls
 	match '/manage_subs', :to=>'admins#manage_subs',:as => :manage_subs
-	match '/manage_site_infos', :to=>'site_infos#index',:as => :manage_site_infos
+	match '/manage_site_infos', :to=>'admins#manage_site_infos',:as => :manage_site_infos
 
 	match '/:custom_url', :to=>'pages#redirections',:via=>'get'
 

@@ -13,6 +13,9 @@
 						<li class="<%= @manage_subs %>">
 							<%= link_to "Subscribers", manage_subs_path %>
 						</li>
+						<li class="<%= @manage_site_infos %>">
+							<%= link_to "Site Infos", manage_site_infos_path %>
+						</li>
 						<li><%= link_to "Logout", destroy_admin_session_path,:method=>'delete' %></li>
 					<% end %>
 				</ul>

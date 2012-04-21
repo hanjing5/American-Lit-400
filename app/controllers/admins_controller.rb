@@ -16,4 +16,12 @@ class AdminsController < ApplicationController
 			redirect_to new_admin_session_path
 		end
 	end
+
+	def manage_site_infos
+		if current_admin
+			redirect_to site_path
+		else
+			redirect_to new_admin_session_path
+		end
+	end
 end

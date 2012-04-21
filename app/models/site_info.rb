@@ -1,4 +1,5 @@
 class SiteInfo < ActiveRecord::Base
+	attr_accessible :meta_data, :nick_name, :name, :bg_img_link
 end
 
 # == Schema Information

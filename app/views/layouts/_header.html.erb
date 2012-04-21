@@ -4,8 +4,8 @@
 			<a class="brand" href="#">InGidio</a>
 
 				<ul class="nav">
-					<li class="<%= @home %>"><a href="/">Home</a></li>
 					<% if current_admin %>
+						<li class="<%= @home %>"><a href="/">Home</a></li>
 						<li class="<%= @manage_urls %>">
 							<%= link_to "Sub-URLs", manage_urls_path %>
 						</li>

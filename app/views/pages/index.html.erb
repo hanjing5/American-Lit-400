@@ -1,4 +1,20 @@
-      <!-- Main hero unit for a primary marketing message or call to action -->
+      <style>
+			body {
+				background-color:white;
+				background-image: url('/images/weapon.jpg');
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			.hero-unit {
+				background-color:black;
+				color:white;
+				opacity:0.8;
+				filter:alpha(opacity=80); /* For IE8 and earlier */
+			}
+			</style>
+			<!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit" style="background-image:url('images/mall.gif'); background-size:49%;background-repeat:no-repeat;background-position:right bottom;filter:alpha(opacity=100);">
         <font color="#0065d0"><h1>Sell Real Products in Games</h1></font>
 				<p></p>
@@ -45,8 +61,10 @@
       <div id='response' style="display:none;width:40.5em">
       </div>
 		<div id="sub_form">
+			
       <%= f.text_field :email, :placeholder=>'test@example.com', :style=>'font-size:2em;height:2em;width:15em' %> 
-      <button id='subscribe_button' class="btn btn-primary btn-large" style='height:2em;font-size:2em;' onclick="$(this).button('loading')" data-loading-text='saving...'>Join Beta</button>
+      <button id='subscribe_button' class="btn btn-primary btn-large" 
+					style='opacity:1.0;height:2.4em;font-size:2em;vertical-align:top;' onclick="$(this).button('loading')" data-loading-text='saving...'>Join Beta</button>
 	</div>
     <% end %>
   </p>
@@ -54,3 +72,6 @@
 
       </div>
 
+			<script>
+			$('.hero-unit').blurjs({ source: 'body', radius: 10 });
+			</script>

@@ -1,7 +1,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: main_site_development
+  database: in_manager_development
   username: root
   password: 
   host: localhost
@@ -11,7 +11,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: main_site_test
+  database: in_manager_test
   username: root
   password: 
   host: localhost
@@ -22,7 +22,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: main_site_production
+  database: in_manager_production
   username: root
   password:
   host: localhost
